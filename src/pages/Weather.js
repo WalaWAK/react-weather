@@ -39,7 +39,11 @@ const Weather = () => {
             {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
           </div>
           <div className="description">
-            {data.weather ? <p>{data.weather[0].main}</p> : null}
+            {data.weather ? <p className='bold'>{data.weather[0].main}</p> : null}
+            {data.weather ? <p>{data.weather[0].description}</p> : null}
+          </div>
+          <div className="temp">
+            {data.main ? <p className='bold'>Day {data.main.temp_max.toFixed()}°F • Night {data.main.temp_min.toFixed()}°F</p> : null}
           </div>
         </div>
 
